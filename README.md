@@ -14,3 +14,12 @@ $ find . -name "*.md" -type f -exec -exec python /path/to/obs2org.py --daily-pat
 - `--daily-path` specifies the directory that contains daily-note files.
 - `--asset_path` specifies the directory that contains any non-markdown files.
 
+## Known issues
+
+- Some symbols in math formula could be converted from `*foo*` to `/foo/`, since they are wrongly detected as italic letters.
+- Link to image (`![foo](bar)`) are not correctly converted to org format (`[[bar][foo]]`).
+
+## Disclaimer
+
+I played around org-mode for very short period, but the appearance of latex preview (both for inline and equation line) is not very satisfactory for me.
+And currently I am kind of back to Obsidian...
